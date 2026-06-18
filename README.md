@@ -1,51 +1,59 @@
 # AI-Native Project Bootstrap Kit
 
-A lightweight bootstrap kit for starting software projects with coding agents.
+A lightweight starter kit for launching software projects with coding agents.
 
-This is **not** meant to be a 20K-token mega-prompt pasted into every run. The useful pattern is:
+It helps you give an agent the right project context, boundaries, and expected output before implementation starts.
 
-1. give the agent a short entrypoint;
-2. provide project context;
-3. ask for a Bootstrap Proposal;
-4. keep risky actions behind explicit approval gates;
-5. let the agent open deeper reference docs only when needed.
+Use it when you want an agent to:
+
+1. understand the project goal and constraints;
+2. ask only the questions that matter;
+3. produce a clear Bootstrap Proposal;
+4. define project memory, docs, gates, and first PR scope;
+5. avoid risky actions until explicitly approved.
 
 ## Use this first
 
-Start here:
+Start with these files:
 
-- [`AGENTS.md`](./AGENTS.md) — short agent protocol for this kit.
-- [`QUICKSTART.md`](./QUICKSTART.md) — short agent entrypoint.
-- [`CONTEXT_TEMPLATE.md`](./CONTEXT_TEMPLATE.md) — what to tell the agent about the project.
-- [`BOOTSTRAP_PROPOSAL_CONTRACT.md`](./BOOTSTRAP_PROPOSAL_CONTRACT.md) — what the agent should return before implementation.
+- [`AGENTS.md`](./AGENTS.md) — general agent protocol;
+- [`QUICKSTART.md`](./QUICKSTART.md) — short entrypoint for a new agent run;
+- [`CONTEXT_TEMPLATE.md`](./CONTEXT_TEMPLATE.md) — project context to fill in;
+- [`BOOTSTRAP_PROPOSAL_CONTRACT.md`](./BOOTSTRAP_PROPOSAL_CONTRACT.md) — expected proposal format;
 - [`SAFETY_BOUNDARIES.md`](./SAFETY_BOUNDARIES.md) — actions that require explicit approval.
 
-Reference only:
+Reference material:
 
-- [`BOOTSTRAP_PROTOCOL.md`](./BOOTSTRAP_PROTOCOL.md) — detailed protocol/playbook. Do not paste this whole file into every agent run.
-- [`PROMPT.md`](./PROMPT.md) — compatibility entrypoint for older links.
+- [`BOOTSTRAP_PROTOCOL.md`](./BOOTSTRAP_PROTOCOL.md) — deeper bootstrap reference;
+- [`PROMPT.md`](./PROMPT.md) — compatibility entrypoint for older links;
 - [`examples/agent-message.md`](./examples/agent-message.md) — copy-paste starter message.
 
 ## Why this exists
 
-When starting a new project with an agent, the same process has to be explained again and again: what context to gather, how to avoid dangerous actions, what project memory should exist, what the first proposal should contain, and when implementation is allowed.
+Starting a project with an agent often requires repeating the same setup context: what is being built, what decisions should be captured, what risks are off-limits, and what the first safe work packet should look like.
 
-This kit standardizes that startup flow without over-controlling the model.
+This kit turns that repeated explanation into a reusable project startup flow.
 
 ## Core idea
 
-Tell the agent the **why, context, constraints, and expected output**.
-Do not micromanage every step.
+Give the agent:
 
-The agent should produce a proposal first. Implementation starts only after explicit approval.
+- intent;
+- project context;
+- constraints;
+- safety boundaries;
+- expected output.
+
+The agent should produce a Bootstrap Proposal first. Implementation starts only after explicit approval.
 
 ## Typical workflow
 
-1. Send the agent the [`AGENTS.md`](./AGENTS.md) and [`QUICKSTART.md`](./QUICKSTART.md) links, or just the repository link.
-2. Fill in the project context from [`CONTEXT_TEMPLATE.md`](./CONTEXT_TEMPLATE.md).
-3. Ask for Phase 1 only: Bootstrap Proposal.
-4. Review the proposal.
-5. Approve implementation only when scope, gates, and first PR are clear.
+1. Send the agent the repository link.
+2. Ask it to read `AGENTS.md` and `QUICKSTART.md` first.
+3. Fill in the project context using `CONTEXT_TEMPLATE.md`.
+4. Ask for Phase 1 only: Bootstrap Proposal.
+5. Review the proposal.
+6. Approve implementation only when scope, gates, and first PR are clear.
 
 ## Related work
 
