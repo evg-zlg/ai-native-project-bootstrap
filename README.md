@@ -14,6 +14,7 @@ This is **not** meant to be a 20K-token mega-prompt pasted into every run. The u
 
 Start here:
 
+- [`AGENTS.md`](./AGENTS.md) — short agent protocol for this kit.
 - [`QUICKSTART.md`](./QUICKSTART.md) — short agent entrypoint.
 - [`CONTEXT_TEMPLATE.md`](./CONTEXT_TEMPLATE.md) — what to tell the agent about the project.
 - [`BOOTSTRAP_PROPOSAL_CONTRACT.md`](./BOOTSTRAP_PROPOSAL_CONTRACT.md) — what the agent should return before implementation.
@@ -40,11 +41,19 @@ The agent should produce a proposal first. Implementation starts only after expl
 
 ## Typical workflow
 
-1. Send the agent the [`QUICKSTART.md`](./QUICKSTART.md) link.
+1. Send the agent the [`AGENTS.md`](./AGENTS.md) and [`QUICKSTART.md`](./QUICKSTART.md) links, or just the repository link.
 2. Fill in the project context from [`CONTEXT_TEMPLATE.md`](./CONTEXT_TEMPLATE.md).
 3. Ask for Phase 1 only: Bootstrap Proposal.
 4. Review the proposal.
 5. Approve implementation only when scope, gates, and first PR are clear.
+
+## Related work
+
+This kit is inspired by the AGENTS.md convention and the Agent1st protocol by applerom:
+
+- https://github.com/applerom/agent1st/blob/main/AGENTS.md
+
+The useful pattern is to give agents intent, constraints, acceptance criteria, evidence expectations, and durable continuity rules instead of step-by-step micromanagement.
 
 ## License
 
