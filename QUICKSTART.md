@@ -6,8 +6,9 @@ This is the short prompt to give a coding agent.
 Use this repository as a lightweight project bootstrap kit:
 https://github.com/evg-zlg/ai-native-project-bootstrap
 
-Read QUICKSTART first.
+Read AGENTS.md and QUICKSTART first.
 Use the other files only when relevant:
+- AGENTS.md for the lightweight operating protocol;
 - CONTEXT_TEMPLATE.md for missing project context;
 - BOOTSTRAP_PROPOSAL_CONTRACT.md for the expected proposal shape;
 - SAFETY_BOUNDARIES.md for approval gates;
