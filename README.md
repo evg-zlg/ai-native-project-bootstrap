@@ -1,77 +1,50 @@
-# AI-Native Project Bootstrap
+# AI-Native Project Bootstrap Kit
 
-A compact entrypoint plus a detailed reference protocol for starting software projects with coding agents.
+A lightweight bootstrap kit for starting software projects with coding agents.
 
-The goal is not to paste a huge prompt into every session. The goal is to give the agent a small starting instruction, then keep the deeper bootstrap rules in the repository as reference documentation.
+This is **not** meant to be a 20K-token mega-prompt pasted into every run. The useful pattern is:
+
+1. give the agent a short entrypoint;
+2. provide project context;
+3. ask for a Bootstrap Proposal;
+4. keep risky actions behind explicit approval gates;
+5. let the agent open deeper reference docs only when needed.
 
 ## Use this first
 
-Give your agent this link:
+Start here:
 
-```txt
-https://github.com/evg-zlg/ai-native-project-bootstrap
-```
+- [`QUICKSTART.md`](./QUICKSTART.md) — short agent entrypoint.
+- [`CONTEXT_TEMPLATE.md`](./CONTEXT_TEMPLATE.md) — what to tell the agent about the project.
+- [`BOOTSTRAP_PROPOSAL_CONTRACT.md`](./BOOTSTRAP_PROPOSAL_CONTRACT.md) — what the agent should return before implementation.
+- [`SAFETY_BOUNDARIES.md`](./SAFETY_BOUNDARIES.md) — actions that require explicit approval.
 
-Or point directly to the short entrypoint:
+Reference only:
 
-```txt
-https://github.com/evg-zlg/ai-native-project-bootstrap/blob/main/QUICKSTART.md
-```
-
-## What problem it solves
-
-Many coding agents start too fast: they code before understanding the project, forget context across sessions, invent structure, miss safety boundaries, or change risky things without an explicit gate.
-
-This bootstrap makes the agent first produce a proposal:
-
-- what we are building;
-- what project mode/type it is;
-- what structure and docs are needed;
-- what safety gates apply;
-- what the first PR should contain;
-- what is explicitly out of scope.
-
-Implementation starts only after owner approval.
-
-## What is already covered
-
-- New repos and existing repos.
-- Minimal vs full project structure.
-- Durable project memory so future agents do not depend on chat history.
-- Product and technical docs.
-- Explicit gates for deploy, secrets, CI, production, database, infrastructure, providers, and customer data.
-- Reusable UI/component policy for web projects.
-- Optional prompts, workflows, skills/playbooks, and evidence/review lanes.
-- Anti-slop rules so the agent does not create useless boilerplate docs.
-- A two-phase process: proposal first, implementation only after approval.
-
-## Files
-
-- [`QUICKSTART.md`](./QUICKSTART.md) — short prompt to give the agent first.
-- [`BOOTSTRAP_PROTOCOL.md`](./BOOTSTRAP_PROTOCOL.md) — full detailed protocol/reference.
+- [`BOOTSTRAP_PROTOCOL.md`](./BOOTSTRAP_PROTOCOL.md) — detailed protocol/playbook. Do not paste this whole file into every agent run.
 - [`PROMPT.md`](./PROMPT.md) — compatibility entrypoint for older links.
 - [`examples/agent-message.md`](./examples/agent-message.md) — copy-paste starter message.
-- [`docs/profile-cleanup-notes.md`](./docs/profile-cleanup-notes.md) — optional GitHub profile cleanup notes.
 
-## Recommended agent message
+## Why this exists
 
-```md
-Read this repository as an AI-native project bootstrap protocol:
-https://github.com/evg-zlg/ai-native-project-bootstrap
+When starting a new project with an agent, the same process has to be explained again and again: what context to gather, how to avoid dangerous actions, what project memory should exist, what the first proposal should contain, and when implementation is allowed.
 
-Start with QUICKSTART first.
-Use BOOTSTRAP_PROTOCOL.md only as a reference when details are needed.
+This kit standardizes that startup flow without over-controlling the model.
 
-Project context:
-- Project name:
-- What we are building:
-- Target users:
-- Repository mode: new repo / existing repo / template / modernization
-- Preferred stack:
+## Core idea
 
-Start with Phase 1 only: Discovery and Bootstrap Proposal.
-Do not implement until I explicitly approve the proposal.
-```
+Tell the agent the **why, context, constraints, and expected output**.
+Do not micromanage every step.
+
+The agent should produce a proposal first. Implementation starts only after explicit approval.
+
+## Typical workflow
+
+1. Send the agent the [`QUICKSTART.md`](./QUICKSTART.md) link.
+2. Fill in the project context from [`CONTEXT_TEMPLATE.md`](./CONTEXT_TEMPLATE.md).
+3. Ask for Phase 1 only: Bootstrap Proposal.
+4. Review the proposal.
+5. Approve implementation only when scope, gates, and first PR are clear.
 
 ## License
 

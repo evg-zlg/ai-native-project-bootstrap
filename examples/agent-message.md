@@ -1,22 +1,25 @@
 # Agent starter message
 
-Read and follow this bootstrap prompt:
+Copy, fill in, and send this to a coding agent.
 
-https://github.com/<owner>/<repo>/blob/main/PROMPT.md
+```md
+Use this bootstrap kit:
+https://github.com/evg-zlg/ai-native-project-bootstrap
+
+Start with QUICKSTART.md.
+Use the detailed protocol only as reference when needed.
 
 Project context:
+- Project name:
+- What we are building:
+- Target users:
+- Repository mode: new repo / existing repo / template / modernization
+- Project type: website / SaaS / internal tool / bot-service / library-SDK / mobile / data-ML / other
+- Preferred stack:
+- Important constraints:
+- Things to avoid:
 
-- Project name: `<name>`
-- Repository mode: `new repo | existing repo | template | modernization`
-- Project type: `client website | SaaS/product app | internal tool | automation/bot/service | library/SDK | mobile app | data/ML | other`
-- What we are building first: `<short MVP description>`
-- Target users: `<audience>`
-- Business goal: `<goal>`
-- Preferred stack, if any: `<stack or no preference>`
-- Important constraints: `<constraints>`
-- Things to avoid: `<avoid>`
-
-Start with Phase 1 only: Discovery and Bootstrap Proposal.
-Use assumptions where reasonable.
+Start with Phase 1 only: Bootstrap Proposal.
 Ask only for missing information that blocks a useful proposal.
-Do not implement, push, deploy, configure secrets, or change CI until I explicitly approve the Bootstrap Proposal.
+Do not implement, push, deploy, configure secrets, change CI, or touch database schema until I explicitly approve.
+```

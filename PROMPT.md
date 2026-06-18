@@ -1,31 +1,15 @@
-# Agent Entrypoint
+# Prompt Entrypoint
 
-This file is kept for compatibility with older links.
+This file is kept as a compatibility entrypoint for agents or links that expect `PROMPT.md`.
 
-For normal use, give the agent this shorter entrypoint first:
+Do **not** treat this repository as a single huge prompt to paste into every run.
 
-- [`QUICKSTART.md`](./QUICKSTART.md)
+Use this order instead:
 
-The full detailed protocol lives here:
+1. Read [`QUICKSTART.md`](./QUICKSTART.md).
+2. Use [`CONTEXT_TEMPLATE.md`](./CONTEXT_TEMPLATE.md) to gather project context.
+3. Produce a proposal matching [`BOOTSTRAP_PROPOSAL_CONTRACT.md`](./BOOTSTRAP_PROPOSAL_CONTRACT.md).
+4. Respect [`SAFETY_BOUNDARIES.md`](./SAFETY_BOUNDARIES.md).
+5. Open [`BOOTSTRAP_PROTOCOL.md`](./BOOTSTRAP_PROTOCOL.md) only as deeper reference when needed.
 
-- [`BOOTSTRAP_PROTOCOL.md`](./BOOTSTRAP_PROTOCOL.md)
-
-## Copy-paste starter
-
-```md
-Read this repository as an AI-native project bootstrap protocol:
-https://github.com/evg-zlg/ai-native-project-bootstrap
-
-Start with QUICKSTART first.
-Use BOOTSTRAP_PROTOCOL.md only as a reference when details are needed.
-
-Project context:
-- Project name:
-- What we are building:
-- Target users:
-- Repository mode: new repo / existing repo / template / modernization
-- Preferred stack:
-
-Start with Phase 1 only: Discovery and Bootstrap Proposal.
-Do not implement until I explicitly approve the proposal.
-```
+First phase only: produce a Bootstrap Proposal. Do not implement until explicitly approved.

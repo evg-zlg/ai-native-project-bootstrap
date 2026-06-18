@@ -1,18 +1,23 @@
 # Quickstart
 
-Use this as the short prompt you actually give to a coding agent.
+This is the short prompt to give a coding agent.
 
 ```md
-Read this repository as an AI-native project bootstrap protocol:
+Use this repository as a lightweight project bootstrap kit:
 https://github.com/evg-zlg/ai-native-project-bootstrap
 
-Start with QUICKSTART first.
-Use BOOTSTRAP_PROTOCOL.md only as a reference when details are needed.
+Read QUICKSTART first.
+Use the other files only when relevant:
+- CONTEXT_TEMPLATE.md for missing project context;
+- BOOTSTRAP_PROPOSAL_CONTRACT.md for the expected proposal shape;
+- SAFETY_BOUNDARIES.md for approval gates;
+- BOOTSTRAP_PROTOCOL.md as detailed reference only if needed.
 
-Your job:
-1. Understand the project context.
-2. Produce a Bootstrap Proposal.
-3. Do not modify files until I explicitly approve.
+Goal:
+Help me start or improve a software project so future humans and agents can continue it safely.
+
+First phase only:
+Produce a Bootstrap Proposal. Do not implement or modify files until I explicitly approve.
 
 Project context:
 - Project name:
@@ -22,8 +27,9 @@ Project context:
 - Project type: website / SaaS / internal tool / bot-service / library-SDK / mobile / data-ML / other
 - Preferred stack:
 - Important constraints:
+- Things to avoid:
 
-Hard rules:
+Critical boundaries:
 - no implementation before approval;
 - no deploy;
 - no real secrets;
@@ -32,11 +38,9 @@ Hard rules:
 - no database schema/migration/destructive commands;
 - agent output is proposal/evidence, not approval.
 
-Phase 1 only: produce a Bootstrap Proposal with assumptions, proposed structure, project memory/docs, gates, local commands, and first PR scope.
+Ask questions only when missing information blocks a useful proposal. Otherwise make assumptions explicit.
 ```
 
-## Why this is short
+## Principle
 
-The full protocol is intentionally stored as reference documentation, not as a 20K-token prompt to paste into every agent run.
-
-Use this file as the entrypoint. Let the agent open deeper sections only when relevant.
+Modern agents usually do not need step-by-step micromanagement. They need clear context, purpose, constraints, tools, and a concrete output contract.
